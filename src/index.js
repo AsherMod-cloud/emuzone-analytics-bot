@@ -245,7 +245,6 @@ async function getVisits(env, start, end) {
                     ) {
                         sum {
                             visits
-                            pageViews
                         }
                     }
                 }

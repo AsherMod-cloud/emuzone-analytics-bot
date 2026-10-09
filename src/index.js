@@ -243,6 +243,7 @@ async function getVisits(env, start, end) {
                         filter: $filter
                         limit: 10000
                     ) {
+                        count
                         sum {
                             visits
                         }
@@ -289,7 +290,7 @@ async function getVisits(env, start, end) {
 
     return groups.reduce(function (total, item) {
         total.visits += Number(item.sum?.visits || 0);
-        total.pageViews += Number(item.sum?.pageViews || 0);
+        total.pageViews += Number(item.count || 0);
         return total;
     }, {
         visits: 0,

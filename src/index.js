@@ -76,7 +76,7 @@ export default {
                         env.TELEGRAM_BOT_TOKEN,
                         message.chat.id,
                         [
-                            "⚠️ EmuZone.ID — Stats",
+                            "⚠️ EmuZone.My.Id — Stats",
                             "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
                             "",
                             "Gagal mengambil data. Coba lagi nanti.",
@@ -103,7 +103,7 @@ function getStartMessage() {
         "Halo, AsherMod! 👋",
         "",
         "Bot ini buat pantau performa",
-        "website EmuZone.ID secara real-time.",
+        "website EmuZone.My.Id secara real-time.",
         "",
         "📊 Yang bisa lo lakuin:",
         "• Pantau kunjungan website",
@@ -195,7 +195,7 @@ async function getStats(env, period) {
         const trend = getTrend(current.visits, yesterday.visits);
 
         return [
-            "📊 EmuZone.ID — Stats",
+            "📊 EmuZone.My.Id — Stats",
             "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
             "",
             "📅 TODAY",
@@ -217,7 +217,7 @@ async function getStats(env, period) {
     };
 
     return [
-        "📊 EmuZone.ID — Stats",
+        "📊 EmuZone.My.Id — Stats",
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
         "",
         "📅 " + labels[selectedPeriod],
